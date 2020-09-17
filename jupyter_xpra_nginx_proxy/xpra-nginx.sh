@@ -24,7 +24,7 @@ http {
     access_log ${T}/access.log;
     location / {
       #proxy_pass http://unix:${T}/xpra.sock:/;
-      proxy_pass ws://127.0.0.1:14500/;
+      proxy_pass http://127.0.0.1:14500/;
       proxy_set_header Upgrade \$http_upgrade;
     }
   }
