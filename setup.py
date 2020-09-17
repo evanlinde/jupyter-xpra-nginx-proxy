@@ -18,6 +18,6 @@ setuptools.setup(
         ]
     },
     package_data={
-        'jupyter_xpra_nginx_proxy': ['icons/xpra.svg'],
+        'jupyter_xpra_nginx_proxy': ['icons/xpra.svg', 'xpra-nginx.sh'],
     },
 )
