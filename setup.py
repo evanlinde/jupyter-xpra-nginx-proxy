@@ -14,7 +14,7 @@ setuptools.setup(
     ],
     entry_points={
         'jupyter_serverproxy_servers': [
-            'xpra = jupyter_xpra_nginx_proxy:setup_xpra',
+            'xpra-nginx = jupyter_xpra_nginx_proxy:setup_xpra',
         ]
     },
     package_data={
