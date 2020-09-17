@@ -27,8 +27,13 @@ http {
       proxy_pass http://127.0.0.1:14500/;
       proxy_set_header Upgrade \$http_upgrade;
     }
+    client_body_temp_path ${T}/client_body;
+    proxy_temp_path ${T}/proxy;
+    fastcgi_temp_path ${T}/fastcgi 1 2;
+    uwsgi_temp_path ${T}/uwsgi;
+    scgi_temp_path ${T}/scgi;
   }
 }
 EOF
-
+mkdir -p ${T}/{client_body,proxy,fastcgi,uwsgi,scgi}
 nginx -c ${T}/nginx.conf
